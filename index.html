@@ -10,16 +10,12 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
 
-    <br />
+    <br/>
 
     <div class="row">
       <div class="col-sm-1 col-md-2 col-lg-2"></div>
@@ -28,23 +24,23 @@
         
         <div class="card">
           <div class="card-header fw-bolder fs-4">Payment Form Example</div>
-          <div class="card-body ">
-            <div class="alert alert-danger p-2 fw-medium" role="alert">
+          <div class="card-body">
+            <div id="alert" class="alert alert-danger p-2 fw-medium" role="alert" style="visibility: hidden;">
               Some fields are missing!
             </div>
 
 
             
-            <form class="row g-3">
-
+            <form onsubmit="formValidation(event)" class="row g-3">
+               
               <div class="col-sm-12 col-lg-6">
                 <label for="validationDefault01" class="form-label fw-semibold">Card #</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="validationDefault01"
+                  id="card-number"
                   value="XXXX-XXXX-XXXX-XXXX"
-                  required
+                  
                 />
               </div>
 
@@ -53,9 +49,9 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="validationDefault02"
+                  id="cvc-number"
                   value="0000"
-                  required
+                  
                 />
               </div>
 
@@ -66,9 +62,9 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="validationDefaultUsername"
+                    id="amount-number"
                     aria-describedby="inputGroupPrepend2"
-                    required
+                    
                   />
                 </div>
               </div>
@@ -82,8 +78,8 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="validationDefault03"
-                  required
+                  id="first-name"
+                  
                 />
               </div>              
               
@@ -92,8 +88,8 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="validationDefault03"
-                  required
+                  id="last-name"
+                  
                 />
               </div>
 
@@ -105,14 +101,14 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="validationDefault03"
-                  required
+                  id="city-name"
+                  
                 />
               </div>
 
               <div class="col-sm-12 col-lg-3">
                 <label for="validationDefault05" class="form-label fw-semibold">State</label>
-                <select class="form-select" aria-label="Default select example">
+                <select id="select-one-state" class="form-select" aria-label="Default select example">
                   <option selected>Pick a state</option>
                   <option value="1">FL-Miami</option>
                   <option value="2">NY</option>
@@ -125,8 +121,8 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="validationDefault05"
-                  required
+                  id="postal-code-number"
+                  
                 />
               </div>
 
@@ -136,7 +132,8 @@
               <div class="col-sm-12 col-lg-4">
                 <label for="validationDefault03" class="form-label fw-semibold">We accept:</label>
 
-                <div class="border rounded p-1 bg-secondary text-white">
+                <div id="check-list" class="border rounded p-1 bg-secondary text-white">
+
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                     <label class="form-check-label" for="inlineRadio1">
@@ -164,6 +161,7 @@
                       <i class="bi bi-credit-card-2-back-fill"></i>
                     </label>
                   </div>
+
                 </div>
 
               </div>
@@ -182,13 +180,14 @@
               <br>
               <br>
 
+              <div class="card-footer text-body-secondary d-flex justify-content-end">
+              <button class="btn btn-">Cancel</button>
+              <button type="submit" class="btn btn-primary">Send</button>
+              </div>
+
             </form>
           </div>
-          <div
-            class="card-footer text-body-secondary d-flex justify-content-end">
-            <a href="#" class="btn btn-">Cancel</a>
-            <a href="#" class="btn btn-primary">Send</a>
-          </div>
+
         </div>
 
       </div>
@@ -200,10 +199,7 @@
 
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
   </body>
 </html>
